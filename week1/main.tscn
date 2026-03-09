@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://chp24ivsb3843" path="res://game_tileset.tres" id="1_7kvgm"]
 [ext_resource type="PackedScene" uid="uid://dt85cuoq2uo4t" path="res://scenes/player.tscn" id="2_p7b3e"]
+[ext_resource type="FontFile" uid="uid://582r2bdnvqpu" path="res://assets/fonts/PixelOperator8.ttf" id="3_p7b3e"]
 
 [node name="Main" type="Node2D" unique_id=509927755]
 
@@ -19,6 +20,13 @@ tile_set = ExtResource("1_7kvgm")
 position = Vector2(185, 80)
 speed = 80.0
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=212545576]
-position = Vector2(0, -38)
-zoom = Vector2(4, 4)
+[node name="Label" type="Label" parent="." unique_id=675716983]
+offset_left = 85.0
+offset_top = 5.0
+offset_right = 280.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_p7b3e")
+theme_override_font_sizes/font_size = 8
+text = "[E] to grow, [Q] to shrink"
+horizontal_alignment = 1
+vertical_alignment = 1

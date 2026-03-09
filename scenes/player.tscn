@@ -183,3 +183,8 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=914483292]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_ujl30")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1699000018]
+position = Vector2(0, -40)
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
