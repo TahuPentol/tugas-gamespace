@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://besla4456u8gi"]
+
+[ext_resource type="Script" uid="uid://dgcywcd1n0f6s" path="res://scripts/create.gd" id="1_cxpf4"]
+[ext_resource type="Texture2D" uid="uid://dk3dn36v3upb7" path="res://assets/sprites/world_tileset.png" id="1_jsj3a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_km3ad"]
+size = Vector2(16, 16)
+
+[node name="Create" type="RigidBody2D" unique_id=522350427]
+collision_layer = 4
+collision_mask = 3
+lock_rotation = true
+linear_damp = 4.0
+script = ExtResource("1_cxpf4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=740098224]
+position = Vector2(0, -8)
+texture = ExtResource("1_jsj3a")
+region_enabled = true
+region_rect = Rect2(112, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254391958]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_km3ad")
