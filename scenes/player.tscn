@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dt85cuoq2uo4t"]
 
 [ext_resource type="Script" uid="uid://7trlpglmdokm" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://djf0i64npg3mb" path="res://scenes/dynamite.tscn" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bebyab4jgnam5" path="res://assets/sprites/knight.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
@@ -175,6 +176,7 @@ radius = 6.0
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_g2els")
+dynamite_scene = ExtResource("2_dqkch")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1251074150]
 position = Vector2(0, -12)
@@ -190,3 +192,6 @@ shape = SubResource("CircleShape2D_ujl30")
 position = Vector2(0, -40)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1630608551]
+position = Vector2(0, -20)

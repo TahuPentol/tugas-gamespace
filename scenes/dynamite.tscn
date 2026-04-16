@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://djf0i64npg3mb"]
+
+[ext_resource type="Texture2D" uid="uid://ctflhgft637b6" path="res://assets/dynamite.png" id="1_rst6a"]
+[ext_resource type="Script" uid="uid://btc7nm2ghl21o" path="res://scripts/dynamite.gd" id="1_ys8y4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys8y4"]
+size = Vector2(4, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6oux"]
+radius = 35.057095
+
+[node name="Dynamite" type="RigidBody2D" unique_id=57297489]
+script = ExtResource("1_ys8y4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1258186588]
+texture = ExtResource("1_rst6a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2094693009]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ys8y4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=57755971]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1031067944]
+shape = SubResource("CircleShape2D_l6oux")
+
+[node name="Timer" type="Timer" parent="." unique_id=1669058794]
