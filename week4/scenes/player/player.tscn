@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://c5y8lien447t2"]
+
+[ext_resource type="Texture2D" uid="uid://c74baatn2mob6" path="res://assets/Scribbles/PNG/Default (64px)/Characters/green_character.png" id="1_hwtwd"]
+[ext_resource type="Script" uid="uid://lgj3x10wkj6a" path="res://week4/scenes/player/player.gd" id="1_oog24"]
+[ext_resource type="Script" uid="uid://byt7dklno3qxw" path="res://week4/scenes/component/weapon.gd" id="2_vt20c"]
+[ext_resource type="Script" uid="uid://dpdvs6msmuxea" path="res://week4/scenes/component/weapon_stats.gd" id="3_60113"]
+[ext_resource type="Texture2D" uid="uid://vu8ck7sspi1n" path="res://assets/Scribbles/PNG/Default (64px)/Items/weapon_sword.png" id="3_mchhl"]
+[ext_resource type="Script" uid="uid://c7i3ik6xhhtdj" path="res://week4/scenes/component/hitbox.gd" id="4_60113"]
+[ext_resource type="Script" uid="uid://di6i20jybmgpb" path="res://week4/scenes/component/health_component.gd" id="5_oog24"]
+[ext_resource type="Script" uid="uid://chwnliukjtao7" path="res://week4/scenes/player/attack_controller.gd" id="8_x28as"]
+[ext_resource type="PackedScene" uid="uid://bgtti76fdswfg" path="res://week4/scenes/player/player_hud.tscn" id="9_x28as"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hgps"]
+radius = 22.022715
+
+[sub_resource type="Resource" id="Resource_oog24"]
+script = ExtResource("3_60113")
+damage = 25.0
+attack_cooldown = 0.3
+weapon_name = "Sword"
+metadata/_custom_type_script = "uid://dpdvs6msmuxea"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x28as"]
+size = Vector2(29.798985, 12.727922)
+
+[sub_resource type="Animation" id="Animation_3tysc"]
+resource_name = "slash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.7853982, 0.61086524, -0.7853982]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ubl6b"]
+_data = {
+&"slash": SubResource("Animation_3tysc")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=1483020011]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_oog24")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=171990396]
+texture = ExtResource("1_hwtwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=975960020]
+shape = SubResource("CircleShape2D_2hgps")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=656364867]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Weapon" type="Node2D" parent="." unique_id=1204773921]
+script = ExtResource("2_vt20c")
+stats = SubResource("Resource_oog24")
+
+[node name="WeaponPivot" type="Node2D" parent="Weapon" unique_id=1732694822]
+rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Weapon/WeaponPivot" unique_id=1277026607]
+position = Vector2(35, 0)
+rotation = 1.5707964
+texture = ExtResource("3_mchhl")
+
+[node name="Hitbox" type="Area2D" parent="Weapon/WeaponPivot" unique_id=1240825416]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("4_60113")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon/WeaponPivot/Hitbox" unique_id=1130497335]
+position = Vector2(42.376163, 0)
+shape = SubResource("RectangleShape2D_x28as")
+debug_color = Color(1, 0.07058824, 0, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Weapon" unique_id=958224508]
+root_node = NodePath("../WeaponPivot")
+libraries/ = SubResource("AnimationLibrary_ubl6b")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=424495887]
+script = ExtResource("5_oog24")
+
+[node name="AttackController" type="Node" parent="." unique_id=184593956 node_paths=PackedStringArray("weapon")]
+script = ExtResource("8_x28as")
+weapon = NodePath("../Weapon")
+
+[node name="PlayerHUD" parent="." unique_id=1748090529 instance=ExtResource("9_x28as")]
+
+[connection signal="area_entered" from="Weapon/WeaponPivot/Hitbox" to="Weapon/WeaponPivot/Hitbox" method="_on_area_entered"]
+[connection signal="body_entered" from="Weapon/WeaponPivot/Hitbox" to="Weapon/WeaponPivot/Hitbox" method="_on_body_entered"]

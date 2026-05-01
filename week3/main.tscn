@@ -3,7 +3,6 @@
 [ext_resource type="TileSet" uid="uid://chp24ivsb3843" path="res://game_tileset.tres" id="1_y84q7"]
 [ext_resource type="PackedScene" uid="uid://dt85cuoq2uo4t" path="res://scenes/player.tscn" id="2_d3vm5"]
 [ext_resource type="FontFile" uid="uid://582r2bdnvqpu" path="res://assets/fonts/PixelOperator8.ttf" id="3_hk8xb"]
-[ext_resource type="PackedScene" uid="uid://djf0i64npg3mb" path="res://scenes/dynamite.tscn" id="4_y84q7"]
 
 [node name="Main" type="Node2D" unique_id=509927755]
 
@@ -31,6 +30,3 @@ theme_override_font_sizes/font_size = 8
 text = "[F] to pull"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Dynamite" parent="." unique_id=57297489 instance=ExtResource("4_y84q7")]
-position = Vector2(86, -40)

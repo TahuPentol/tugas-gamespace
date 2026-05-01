@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2bte27ektsso"]
+
+[ext_resource type="Texture2D" uid="uid://m37vb5jg8ut1" path="res://assets/Scribbles/PNG/Default (64px)/Characters/purple_character.png" id="1_7ccnv"]
+[ext_resource type="Script" uid="uid://bqgwug4xpnahx" path="res://week4/scenes/enemy/summoner/summoner.gd" id="2_oj80h"]
+[ext_resource type="PackedScene" uid="uid://c2fc55hq1fb1j" path="res://week4/scenes/enemy/pawn/pawn.tscn" id="3_espri"]
+
+[node name="Summoner" type="Node2D" unique_id=751684243]
+script = ExtResource("2_oj80h")
+enemy_scene = ExtResource("3_espri")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2007796183]
+texture = ExtResource("1_7ccnv")
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=119080728]
+position = Vector2(-42, 35)
