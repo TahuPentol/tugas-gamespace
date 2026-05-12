@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://lf3ki2dj65k2"]
+
+[ext_resource type="Script" uid="uid://cae8yfmldm1em" path="res://week5/scenes/inventory_slot.gd" id="1_emott"]
+[ext_resource type="Texture2D" uid="uid://bjyak6amlcwkq" path="res://assets/items/slot_display.png" id="1_epypd"]
+[ext_resource type="PackedScene" uid="uid://cfesmffh0scap" path="res://week5/scenes/dragable_item.tscn" id="3_68e3s"]
+[ext_resource type="FontFile" uid="uid://582r2bdnvqpu" path="res://assets/fonts/PixelOperator8.ttf" id="4_3fnw3"]
+
+[node name="InventorySlot" type="TextureRect" unique_id=734024611]
+custom_minimum_size = Vector2(24, 24)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_epypd")
+script = ExtResource("1_emott")
+dragable_item_scene = ExtResource("3_68e3s")
+
+[node name="ItemDisplayRect" type="TextureRect" parent="." unique_id=1599910927]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Quantity" type="Label" parent="ItemDisplayRect" unique_id=2054461824]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -8.0
+offset_right = 7.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_3fnw3")
+theme_override_font_sizes/font_size = 8
+text = "12"
+horizontal_alignment = 1

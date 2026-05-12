@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cfhv5v7x8cvg3"]
+
+[ext_resource type="Script" uid="uid://dglpq8074x0rk" path="res://week5/scenes/inventory.gd" id="1_x45tw"]
+[ext_resource type="PackedScene" uid="uid://3vfaqnchqlp4" path="res://week5/scenes/item_grid.tscn" id="2_53drd"]
+[ext_resource type="PackedScene" uid="uid://lf3ki2dj65k2" path="res://week5/scenes/inventory_slot.tscn" id="3_8g2jj"]
+
+[node name="Inventory" type="PanelContainer" unique_id=1599808038]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_x45tw")
+
+[node name="ItemGrid" parent="." unique_id=1452641024 instance=ExtResource("2_53drd")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 6
+
+[node name="InventorySlot" parent="ItemGrid" unique_id=734024611 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="ItemGrid" unique_id=1910049228 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="ItemGrid" unique_id=1360566483 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="ItemGrid" unique_id=457605842 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="ItemGrid" unique_id=468068844 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="ItemGrid" unique_id=215161612 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="ItemGrid" unique_id=727188774 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="ItemGrid" unique_id=2118893016 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="ItemGrid" unique_id=266303904 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="ItemGrid" unique_id=71670993 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="ItemGrid" unique_id=225144271 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="ItemGrid" unique_id=930000656 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="ItemGrid" unique_id=173453882 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="ItemGrid" unique_id=1395463251 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="ItemGrid" unique_id=891593203 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="ItemGrid" unique_id=1634477757 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="ItemGrid" unique_id=2039556720 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="ItemGrid" unique_id=680875788 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="ItemGrid" unique_id=846814102 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="ItemGrid" unique_id=458489000 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="ItemGrid" unique_id=707751528 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="ItemGrid" unique_id=1537865961 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="ItemGrid" unique_id=1628818658 instance=ExtResource("3_8g2jj")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="ItemGrid" unique_id=1679423537 instance=ExtResource("3_8g2jj")]
+layout_mode = 2

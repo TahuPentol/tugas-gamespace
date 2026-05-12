@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://3vfaqnchqlp4"]
+
+[ext_resource type="Script" uid="uid://b7p4u526obo84" path="res://week5/scenes/item_grid.gd" id="1_85obt"]
+
+[node name="ItemGrid" type="GridContainer" unique_id=1452641024]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_85obt")

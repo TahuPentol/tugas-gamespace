@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://7oypdqnhigjh"]
+
+[ext_resource type="PackedScene" uid="uid://cfhv5v7x8cvg3" path="res://week5/scenes/inventory.tscn" id="1_hi40m"]
+[ext_resource type="Script" uid="uid://338k547soutq" path="res://week5/resources/item_data.gd" id="2_0qmte"]
+[ext_resource type="Texture2D" uid="uid://dav6vh1j67u4m" path="res://assets/items/coin.png" id="3_0qmte"]
+
+[sub_resource type="Resource" id="Resource_0qmte"]
+script = ExtResource("2_0qmte")
+item_name = "Coin"
+texture = ExtResource("3_0qmte")
+quantity = 5
+metadata/_custom_type_script = "uid://338k547soutq"
+
+[node name="InventoryUI" type="Control" unique_id=343061865]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" parent="." unique_id=1599808038 instance=ExtResource("1_hi40m")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -49.5
+offset_right = 74.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+items = Array[ExtResource("2_0qmte")]([SubResource("Resource_0qmte")])
