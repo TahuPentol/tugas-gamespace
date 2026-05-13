@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cdfhepe3ad5yf"]
+
+[ext_resource type="Texture2D" uid="uid://calhbfml3mjfk" path="res://week6/wooden_block.png" id="1_lnihg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmdfe"]
+size = Vector2(6, 32)
+
+[node name="WoodenBlock" type="RigidBody2D" unique_id=1722679484]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1076359365]
+texture = ExtResource("1_lnihg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979520242]
+shape = SubResource("RectangleShape2D_gmdfe")

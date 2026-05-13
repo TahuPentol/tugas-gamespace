@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://btmwmd2qs4pgb"]
+
+[ext_resource type="Texture2D" uid="uid://cfvkuqr8e4wqv" path="res://week6/silver_ball.png" id="1_8k5hk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ex5rt"]
+radius = 3.0
+
+[node name="Ball" type="RigidBody2D" unique_id=1459135361]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=642076871]
+texture = ExtResource("1_8k5hk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1224104555]
+shape = SubResource("CircleShape2D_ex5rt")
