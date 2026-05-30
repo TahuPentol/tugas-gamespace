@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d3qn8vnu0birl"]
+
+[ext_resource type="Script" uid="uid://c5emip5a8740m" path="res://week8/player.gd" id="1_8gjje"]
+[ext_resource type="Texture2D" uid="uid://vunlpy3ilo0y" path="res://assets/Scribbles/PNG/Default (64px)/Characters/red_character.png" id="2_v68a1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmtua"]
+radius = 22.0
+
+[node name="Player" type="CharacterBody2D" unique_id=765148034]
+script = ExtResource("1_8gjje")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1863411384]
+texture = ExtResource("2_v68a1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1269727116]
+shape = SubResource("CircleShape2D_qmtua")

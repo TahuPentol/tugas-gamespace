@@ -15,10 +15,16 @@ config/tags=PackedStringArray("gamespace")
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Week8="*uid://cl73j473xfsj7"
+TransitionManager="*uid://bb163enq2vnb"
+
 [global_group]
 
 Player=""
 Enemy=""
+Tilemap=""
 
 [input]
 

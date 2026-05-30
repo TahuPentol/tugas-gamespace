@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://burvbhiblplgb"]
+
+[ext_resource type="Script" uid="uid://c43mxgae1qv5k" path="res://week8/ladder.gd" id="1_xva1u"]
+[ext_resource type="Texture2D" uid="uid://juupoq5cqe1j" path="res://assets/Scribbles/PNG/Default (64px)/stairs_down.png" id="2_gfa8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8rts"]
+size = Vector2(62, 62)
+
+[node name="Ladder" type="Area2D" unique_id=1333247056]
+script = ExtResource("1_xva1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=456842829]
+texture = ExtResource("2_gfa8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=814729145]
+shape = SubResource("RectangleShape2D_i8rts")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
